@@ -1,0 +1,26 @@
+{
+  "name": "catalog-app",
+  "version": "1.0.0",
+  "description": "Simple catalog using React and Redux",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "server": "nodemon ./server/index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Jorge Troya",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "moment": "^2.22.1",
+    "nodemon": "^1.17.5",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4",
+    "winston": "^2.4.2"
+  }
+}
