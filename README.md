@@ -4,6 +4,12 @@ In this repo you will find to folders:
 - _**server**_ to provide the endpoint `/api/phones`
 - _**client**_ to provide the frontend
 
+### Install
+
+After you clone the repo, you need to install the server and client dependencies in this way:
+ -  In the root project folder and run: `yarn install` or `npm install`
+ -  Enter into client folder and run: `yarn install` or `npm install`
+
 Below you will find some information on how to perform common tasks.<br>
 
 ### Available Scripts in server folder
@@ -14,7 +20,7 @@ In this directory, you can run only the server with:
 
 To run the server and client together in development mode with:
 
-#### `npm run dev`
+##### `npm run dev`
 
 ### Available Scripts in client folder
 
