@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhoneList matches the snapshot 1`] = `
+<div
+  className="container"
+>
+  <Row>
+    <Col
+      key="0"
+      l={4}
+      m={6}
+      s={12}
+    >
+      <Card
+        className="hoverable"
+        header={
+          <CardTitle
+            className="card_img"
+            image="img-urg"
+          />
+        }
+        horizontal={true}
+        title="my model"
+      >
+        <Link
+          replace={false}
+          to="/detail/undefined"
+        >
+          my description
+        </Link>
+      </Card>
+    </Col>
+  </Row>
+</div>
+`;

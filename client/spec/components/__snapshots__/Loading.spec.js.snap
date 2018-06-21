@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading matches the snapshot 1`] = `
+<Row
+  className="container"
+>
+  <Col
+    m={12}
+    s={12}
+  >
+    <div
+      className="center-align"
+    >
+      <Preloader
+        active={true}
+        color="blue"
+        flashing={false}
+        size="medium"
+      />
+    </div>
+  </Col>
+</Row>
+`;

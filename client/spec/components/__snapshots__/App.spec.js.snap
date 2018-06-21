@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App matches the snapshot 1`] = `
+<BrowserRouter>
+  <Row>
+    <Header
+      appName="Catalog"
+    />
+    <div
+      className="section"
+    >
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        exact={true}
+        path="/detail/:phoneId"
+        render={[Function]}
+      />
+    </div>
+    <FooterApp />
+  </Row>
+</BrowserRouter>
+`;

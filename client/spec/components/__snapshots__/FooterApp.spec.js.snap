@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterApp matches the snapshot 1`] = `
+<Footer
+  className="footer_app"
+  copyrights="2018 Copyright Text"
+/>
+`;

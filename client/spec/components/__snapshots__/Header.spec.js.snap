@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches the snapshot 1`] = `
+<nav>
+  <div
+    className="nav-wrapper"
+  >
+    <Link
+      replace={false}
+      to="/"
+    >
+      <span
+        className="brand-logo center"
+      >
+        My App
+      </span>
+    </Link>
+  </div>
+</nav>
+`;
