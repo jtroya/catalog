@@ -27,7 +27,7 @@ let store = createStore(
 );
 
 let persistor = persistStore(store);
-  
+
 ReactDOM.render(
   <Provider store={ store }>
     <PersistGate loading={ null } persistor={ persistor }>

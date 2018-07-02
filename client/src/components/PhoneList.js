@@ -9,7 +9,7 @@ class PhoneList extends Component {
   componentDidMount() {
     this.props.fetchCatalog();
   }
-  
+
   handleLinkDetail = (goTo, value) => {
     return (
       <Link to={ goTo }>{ value }</Link>
@@ -18,7 +18,7 @@ class PhoneList extends Component {
 
   displayHeader = (value) => {
     return (
-      <CardTitle className="card_img" image={value}></CardTitle>
+      <CardTitle className="card_img" image={ value }/>
     );
   };
 
@@ -29,8 +29,8 @@ class PhoneList extends Component {
         return (
           <Col s={ 12 } m={ 6 } l={ 4 } key={ index }>
             <Card horizontal className="hoverable"
-              header={ this.displayHeader(item.imageUrl)}
-              title={ item.model}>
+              header={ this.displayHeader(item.imageUrl) }
+              title={ item.model }>
               { this.handleLinkDetail(`/detail/${item.phoneId}`, item.description) }
             </Card>
           </Col>
@@ -38,7 +38,7 @@ class PhoneList extends Component {
       });
     }
   }
-  
+
   render() {
     const { loading } = this.props;
     return (
@@ -56,6 +56,7 @@ class PhoneList extends Component {
 }
 
 PhoneList.propTypes = {
+  fetchCatalog: PropTypes.func,
   loading: PropTypes.bool,
   catalog: PropTypes.array
 };

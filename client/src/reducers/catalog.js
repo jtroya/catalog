@@ -10,13 +10,13 @@ const initialSate = {
 export default function (state = initialSate, action) {
   switch (action.type) {
     case FETCH_CATALOG:
-      return { 
+      return {
         ...state,
         selectedItem: [],
         currentId: null,
-        loading: true 
+        loading: true
       };
-    case FETCH_CATALOG_SUCCESS: 
+    case FETCH_CATALOG_SUCCESS:
       return {
         ...state,
         loading: false,
@@ -37,5 +37,5 @@ export default function (state = initialSate, action) {
     default:
       return state;
   }
-};
+}
 
