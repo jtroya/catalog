@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Row, Col, Table } from 'react-materialize';
 
 class PhoneDetailComponent extends Component {
@@ -7,7 +8,7 @@ class PhoneDetailComponent extends Component {
   }
 
   renderInfo = () => {
-    const { brand, model, color, description, price, storage, imageUrl  } = this.props.selectedItem[0];
+    const { brand, model, color, description, price, storage, imageUrl  } = this.props.selectedItem;
     return (
       <Row className="container">
         <Col s={ 12 } m={ 4 } l={ 4 }>
@@ -34,12 +35,23 @@ class PhoneDetailComponent extends Component {
   render() {    
     return (
       <Row>
-        { this.props.selectedItem[0] &&
+        { this.props.selectedItem &&
           this.renderInfo()
         }
       </Row>
     )
   }
 }
+
+PhoneDetailComponent.propTypes = {
+  getInfoDetail: PropTypes.func,
+  brand: PropTypes.string,
+  model: PropTypes.string,
+  color: PropTypes.string,
+  description: PropTypes.string,
+  price: PropTypes.number,
+  storage: PropTypes.string,
+  imageUrl: PropTypes.string
+};
 
 export default PhoneDetailComponent;

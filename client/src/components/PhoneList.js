@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { Row, Col, Card, CardTitle } from 'react-materialize';
 import { Link } from 'react-router-dom';
 

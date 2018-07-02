@@ -12,7 +12,7 @@ export default function (state = initialSate, action) {
     case FETCH_CATALOG:
       return {
         ...state,
-        selectedItem: [],
+        selectedItem: {},
         currentId: null,
         loading: true
       };
@@ -32,10 +32,9 @@ export default function (state = initialSate, action) {
       return {
         ...state,
         currentId: action.currentId,
-        selectedItem: state.catalog.filter(item => item.phoneId === parseInt(action.currentId, 10))
+        selectedItem: state.catalog.find(item => item.phoneId === parseInt(action.currentId, 10))
       }
     default:
       return state;
   }
 }
-
