@@ -3,7 +3,7 @@ import { FETCH_CATALOG, FETCH_CATALOG_SUCCESS, FETCH_CATALOG_FAILURE, GET_INFO_D
 const initialSate = {
   loading: true,
   catalog: [],
-  selectedItem: [],
+  selectedItem: {},
   currentId: null
 };
 
@@ -25,7 +25,7 @@ export default function (state = initialSate, action) {
     case FETCH_CATALOG_FAILURE:
       return {
         ...state,
-        selectedItem: [],
+        selectedItem: {},
         currentId: null,
       };
     case GET_INFO_DETAIL:

@@ -5,20 +5,20 @@ describe('Catalog reducer', () => {
   const initialSate = {
     loading: true,
     catalog: [],
-    selectedItem: [],
+    selectedItem: {},
     currentId: null
   };
   const fakeCatalog = [{ name: 'my name' }];
 
   it('should return initial state', () => {
-    expect(catalogReducer(undefined, { loading: true, selectedItem: [], currentId: null })).toEqual(initialSate)
+    expect(catalogReducer(undefined, { loading: true, selectedItem: {}, currentId: null })).toEqual(initialSate)
   });
 
   it('should handle FETCH_CATALOG', () => {
     const fakeAction = {
       type: types.FETCH_CATALOG
     };
-    const expectedResult ={ loading: true, selectedItem: [], currentId: null };
+    const expectedResult = { loading: true, selectedItem: {}, currentId: null };
     expect(catalogReducer({}, fakeAction)).toEqual(expectedResult);
   });
 
@@ -27,7 +27,7 @@ describe('Catalog reducer', () => {
       type: types.FETCH_CATALOG_SUCCESS,
       catalog: fakeCatalog
     };
-    const expectedResult ={ loading: false, catalog: fakeCatalog }
+    const expectedResult = { loading: false, catalog: fakeCatalog }
     expect(catalogReducer({}, fakeAction)).toEqual(expectedResult);
   });
 
@@ -35,6 +35,6 @@ describe('Catalog reducer', () => {
     const fakeAction = {
       type: types.FETCH_CATALOG_FAILURE
     };
-    expect(catalogReducer({}, fakeAction)).toEqual({ selectedItem: [], currentId: null });
+    expect(catalogReducer({}, fakeAction)).toEqual({ selectedItem: {}, currentId: null });
   });
 });

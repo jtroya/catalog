@@ -30,7 +30,7 @@ describe('Catalog actions', () => {
       type: types.FETCH_CATALOG_SUCCESS,
       catalog: fakeCatalog
     };
-    expect(actions.FetchCatalogSuccess(fakeCatalog)).toEqual(fakeAction);
+    expect(actions.fetchCatalogSuccess(fakeCatalog)).toEqual(fakeAction);
   });
 
   it('should create action fetchCatalogFailure', () => {
@@ -48,7 +48,7 @@ describe('Catalog actions', () => {
     ];
     const store = mockStore({ 
       loading: true,
-      catalog: [] 
+      catalog: []
     });
 
     moxios.wait(() => {
